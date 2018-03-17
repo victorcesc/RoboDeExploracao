@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RoboExplorador.iml" filepath="$PROJECT_DIR$/.idea/modules/RoboExplorador.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RoboExplorador_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RoboExplorador_main.iml" group="RoboExplorador" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RoboExplorador_test.iml" filepath="$PROJECT_DIR$/.idea/modules/RoboExplorador_test.iml" group="RoboExplorador" />
+    </modules>
+  </component>
+</project>
