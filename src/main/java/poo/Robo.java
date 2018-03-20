@@ -75,13 +75,13 @@ public class Robo {
                 if (this.frente == "N") {
 
                     this.frente = "O";
-                }
+                }else
                 if (this.frente == "S") {
                     this.frente = "L";
-                }
+                }else
                 if (this.frente == "O") {
                     this.frente = "S";
-                }
+                }else
                 if (this.frente == "L") {
                     this.frente = "N";
                 }
@@ -90,13 +90,13 @@ public class Robo {
             if (S == 'D') {
                 if (this.frente == "N") {
                     this.frente = "L";
-                }
+                }else
                 if (this.frente == "S") {
                     this.frente = "O";
-                }
+                }else
                 if (this.frente == "O") {
                     this.frente = "N";
-                }
+                }else
                 if (this.frente == "L") {
                     this.frente = "S";
                 }
@@ -115,7 +115,7 @@ public class Robo {
         for(int i=0;i<n;i++){
             if((M.charAt(i) == 'M') || M.charAt(i) == 'E' || M.charAt(i) == 'D'){
                     char p = M.charAt(i);
-                System.out.println(p);
+               // System.out.println(p);
                     Mover(p);
             }
 
