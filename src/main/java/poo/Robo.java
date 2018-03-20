@@ -106,5 +106,18 @@ public class Robo {
         }
     }
 
+    public void movimentacao(String M){
+        int n;
+        n = M.length();
+
+        for(int i=0;i<n;i++){
+            if((M.charAt(i) == 'M') || M.charAt(i) == 'E' || M.charAt(i) == 'D'){
+
+            }
+
+        }
+
+    }
+
 
 }
