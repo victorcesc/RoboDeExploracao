@@ -8,7 +8,7 @@ public class Robo {
 
 
 
-    public Robo(int locx, int locy, int areax, int areay, String frente) {
+    public Robo(int areax, int areay, int locx, int locy, String frente) {
         this.locx = locx;
         this.locy = locy;
         this.areax = areax;
@@ -38,41 +38,42 @@ public class Robo {
 
 
 
-    public String warnLimits(String s){
+    public String WarnLimits(String s){
         String x="";
         if(s=="L.Exp") x =  "Voce esta no limite da Area de Exploracao!";
         if(s=="ErroMover") x = "Comando invalido de movimentacao!";
         return x;
     }
 
-    public void mover(String S) {
-        if (S == "M" || S == "E" || S == "D") {
-            if (S == "M") {
+    public void Mover(char S) {
+        if (S == 'M' || S == 'E' || S == 'D') {
+            if (S == 'M') {
                 if (this.frente == "N") {
                     if (this.locy < this.areay) {
                         this.locy++;
                     } else {
-                        System.out.println(warnLimits("L.Exp"));
+                       System.out.println(WarnLimits("L.Exp"));
                     }
                 }
                 if (this.frente == "S") {
-                    if (this.locy > this.areay) {
+                    if (this.locy > 0) {
                         this.locy--;
-                    } else System.out.println(warnLimits("L.Exp"));
+                   } else System.out.println(WarnLimits("L.Exp"));
                 }
                 if (this.frente == "L") {
-                    if (this.locx < this.areay) {
+                    if (this.locx < this.areax) {
                         this.locx++;
-                    } else System.out.println(warnLimits("L.Exp"));
+                    } else System.out.println(WarnLimits("L.Exp"));
                 }
                 if (this.frente == "O") {
-                    if (this.locx > this.areay) {
+                    if (this.locx > 0) {
                         this.locx--;
-                    } else System.out.println(warnLimits("L.Exp"));
+                    } else System.out.println(WarnLimits("L.Exp"));
                 }
             }
-            if (S == "E") {
+            if (S == 'E') {
                 if (this.frente == "N") {
+
                     this.frente = "O";
                 }
                 if (this.frente == "S") {
@@ -86,7 +87,7 @@ public class Robo {
                 }
 
             }
-            if (S == "D") {
+            if (S == 'D') {
                 if (this.frente == "N") {
                     this.frente = "L";
                 }
@@ -102,17 +103,20 @@ public class Robo {
             }
 
         }else{
-            System.out.println(warnLimits("ErroMover"));
+            System.out.println(WarnLimits("ErroMover"));
         }
     }
 
-    public void movimentacao(String M){
+    public void Movimentacao(String m){
         int n;
+        String M = m.toUpperCase();
         n = M.length();
 
         for(int i=0;i<n;i++){
             if((M.charAt(i) == 'M') || M.charAt(i) == 'E' || M.charAt(i) == 'D'){
-
+                    char p = M.charAt(i);
+                System.out.println(p);
+                    Mover(p);
             }
 
         }
