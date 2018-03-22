@@ -48,56 +48,56 @@ public class Robo {
     public void Mover(char S) {
         if (S == 'M' || S == 'E' || S == 'D') {
             if (S == 'M') {
-                if (this.frente == "N") {
+                if (this.frente.equals("N")) {
                     if (this.locy < this.areay) {
                         this.locy++;
                     } else {
                        System.out.println(WarnLimits("L.Exp"));
                     }
                 }
-                if (this.frente == "S") {
+                if (this.frente.equals("S")) {
                     if (this.locy > 0) {
                         this.locy--;
                    } else System.out.println(WarnLimits("L.Exp"));
                 }
-                if (this.frente == "L") {
+                if (this.frente.equals("L")) {
                     if (this.locx < this.areax) {
                         this.locx++;
                     } else System.out.println(WarnLimits("L.Exp"));
                 }
-                if (this.frente == "O") {
+                if (this.frente.equals("O")) {
                     if (this.locx > 0) {
                         this.locx--;
                     } else System.out.println(WarnLimits("L.Exp"));
                 }
             }
             if (S == 'E') {
-                if (this.frente == "N") {
+                if (this.frente.equals("N")) {
 
                     this.frente = "O";
                 }else
-                if (this.frente == "S") {
+                if (this.frente.equals("S")) {
                     this.frente = "L";
                 }else
-                if (this.frente == "O") {
+                if (this.frente.equals("O")) {
                     this.frente = "S";
                 }else
-                if (this.frente == "L") {
+                if (this.frente.equals("L")) {
                     this.frente = "N";
                 }
 
             }
             if (S == 'D') {
-                if (this.frente == "N") {
+                if (this.frente.equals("N")) {
                     this.frente = "L";
                 }else
-                if (this.frente == "S") {
+                if (this.frente.equals("S")) {
                     this.frente = "O";
                 }else
-                if (this.frente == "O") {
+                if (this.frente.equals("O")) {
                     this.frente = "N";
                 }else
-                if (this.frente == "L") {
+                if (this.frente.equals("L")) {
                     this.frente = "S";
                 }
             }
